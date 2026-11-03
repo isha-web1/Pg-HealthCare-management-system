@@ -5,6 +5,7 @@ import { notFound } from "./app/middleware/notFound";
 
 
 
+
 const app: Application = express();
 
 
@@ -19,7 +20,6 @@ app.use("/api/v1", IndexRoutes);
 // Basic route
 app.get('/', async (req: Request, res: Response) => {
   
-    
     res.status(201).json({
         success: true,
         message: 'API is working',
