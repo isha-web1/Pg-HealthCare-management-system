@@ -1,9 +1,7 @@
-export interface IAdminFilterRequest {
-  name?: string;
-  email?: string;
-  contactNumber?: string;
-  createdAt?: {
-    from?: Date;
-    to?: Date;
-  };
+export interface IUpdateAdminPayload {
+    admin?: {
+        name?: string;
+        profilePhoto?: string;
+        contactNumber?: string;
+    }
 }
