@@ -1,8 +1,3 @@
-generator client {
-  provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
-}
-
 model Appointment {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   patientId          String   @db.Uuid
@@ -19,10 +14,8 @@ model Appointment {
   doctor         Doctor          @relation(fields: [doctorId], references: [id])
   doctorSchedule DoctorSchedules @relation(fields: [doctorScheduleId], references: [id])
 
-  // One appointment can have one payment, review, prescription, and medical report
-  payment         Payment?
+  // An appointment can have one review and one medical report.
   review          Review?
-  prescription    Prescription?
   medicalReport   MedicalReport?
 
   @@map("appointments")
