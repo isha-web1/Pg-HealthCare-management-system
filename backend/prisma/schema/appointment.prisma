@@ -16,6 +16,7 @@ model Appointment {
 
   // An appointment can have one review and one medical report.
   review          Review?
+  prescription Prescription?
   medicalReport   MedicalReport?
 
   @@map("appointments")

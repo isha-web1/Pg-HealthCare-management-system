@@ -19,6 +19,7 @@ model Patient {
   appointments      Appointment[]
   reviews           Review[]
   medicalReports    MedicalReport[]
+  prescriptions Prescription[]
 
 
 

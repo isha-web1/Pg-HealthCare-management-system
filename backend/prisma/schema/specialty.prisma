@@ -21,7 +21,7 @@ model Specialty {
 
 model DoctorSpecialty {
     id String @id @default(uuid(7))
-    doctorId  String
+    doctorId  String @db.Uuid
     specialtyId String
 
     doctor Doctor @relation(fields: [doctorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
